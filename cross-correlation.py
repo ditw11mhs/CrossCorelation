@@ -4,7 +4,6 @@ import pandas as pd
 import os
 import sys
 
-# with st.echo('below'):
 class Main:
     def __init__(self):
         pass
@@ -93,7 +92,7 @@ class Main:
 
         # data1 = np.loadtxt(path1)
         # data2 = np.loadtxt(path2)
-        x = np.linspace(0, 1, 10000)
+        x = np.linspace(0, 1, 5000)
         data1 = np.sin(5*np.pi*x)
         data2 = np.sin(5*np.pi*x)
 
