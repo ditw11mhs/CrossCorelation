@@ -88,7 +88,7 @@ class Main:
             path1 = r'/app/Data/Heel123.txt'
             path2 = r'/app/Data/Toe123.txt'
         else:
-            path1 = r'Data\Heel132.txt'
+            path1 = r'Data\Heel123.txt'
             path2 = r'Data\Toe123.txt'
 
         data1 = np.loadtxt(path1)
@@ -121,7 +121,8 @@ class Main:
         return correlation
 
     def normalize(self, data):
-        return (data-np.min(data))/((np.max(data)-np.min(data)+10e-8))
+        # return (data-np.min(data))/((np.max(data)-np.min(data)+10e-8))
+        return data/self.data1_len
 
 
 if __name__ == "__main__":
