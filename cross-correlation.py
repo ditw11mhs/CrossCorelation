@@ -120,7 +120,7 @@ class Main:
         return correlation
 
     def normalize(self, data):
-        return (data-np.min(data))/(np.max(data)-np.min(data))
+        return (data-np.min(data))/((np.max(data)-np.min(data)+10e-8))
 
 
 if __name__ == "__main__":
