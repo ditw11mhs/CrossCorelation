@@ -4,6 +4,7 @@ import pandas as pd
 import os
 import sys
 
+
 class Main:
     def __init__(self):
         pass
@@ -29,14 +30,15 @@ class Main:
 
         st.title("Cross Correlation")
         st.caption("Aditya Wardianto 07311940000001 - Biomodelling ITS")
-        st.markdown("[Github Link](https://github.com/ditw11mhs/CrossCorrelation)")
+        st.markdown("""<script async defer src="https://buttons.github.io/buttons.js"></script>
+        <a class="github-button" href="https://github.com/ditw11mhs/CrossCorrelation/" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" aria-label="Open ditw11mhs/CrossCorrelation on GitHub">Watch</a>""", unsafe_allow_html=True)
 
         # Time Lag
         st.header("Time Lag")
         self.t_lag = st.slider(label="Time Lag", min_value=-(self.data2_len-1), max_value=self.data2_len -
-                            1, value=0, help="Slider to shift Data 2 position horizontaly")
+                               1, value=0, help="Slider to shift Data 2 position horizontaly")
         data2_out = data2_padded[self.data2_len -
-                                self.t_lag:2*self.data2_len-self.t_lag]
+                                 self.t_lag:2*self.data2_len-self.t_lag]
 
         col1, col2 = st.columns(2)
         # Plotting Input
@@ -52,7 +54,6 @@ class Main:
 
         # Correlation
         correlation = self.correlate(data1, data2_padded)
-        
 
         col3, col4 = st.columns(2)
         with col3:
