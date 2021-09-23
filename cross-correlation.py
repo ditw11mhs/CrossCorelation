@@ -34,11 +34,11 @@ class Main:
         st.title("Cross Correlation")
         st.caption("Aditya Wardianto 07311940000001 - Biomodelling ITS")
 
-        st.components.v1.iframe(
-            """
-                                <script async defer src="https://buttons.github.io/buttons.js"></script>
-                                <a class="github-button" href="https://github.com/ditw11mhs/CrossCorrelation/" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" data-show-count="true" aria-label="Watch ditw11/CrossCorrelation on GitHub">Watch</a>
-                                """,
+        st.components.v1.html(
+            """ 
+            <script async defer src="https://buttons.github.io/buttons.js"></script>
+            <a class="github-button" href="https://github.com/ditw11mhs/CrossCorrelation/" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" data-show-count="true" aria-label="Watch ditw11/CrossCorrelation on GitHub">Watch</a>
+            """,
             height=45,
         )
         # Time Lag
