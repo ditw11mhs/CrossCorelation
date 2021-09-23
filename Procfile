@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run linear_prediction.py
+web: sh setup.sh && streamlit run cross-correlation.py
