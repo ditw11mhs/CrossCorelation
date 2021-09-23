@@ -121,7 +121,6 @@ with st.echo('below'):
             return correlation
 
         def normalize(self, data):
-            # return (data - np.mean(data))/np.std(data)
             return (data-np.min(data))/(np.max(data)-np.min(data))
 
 
