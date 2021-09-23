@@ -31,12 +31,10 @@ class Main:
         st.title("Cross Correlation")
         st.caption("Aditya Wardianto 07311940000001 - Biomodelling ITS")
         # st.markdown("""<script async defer src="https://buttons.github.io/buttons.js"></script><a class="github-button" href="https://github.com/ditw11mhs/CrossCorrelation/" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" aria-label="Open ditw11mhs/CrossCorrelation on GitHub">Watch</a>""", unsafe_allow_html=True)
-        st.components.v1.html("""
-        <!-- Place this tag in your head or just before your close body tag. -->
+        st.components.v1.iframe("""
 <script async defer src="https://buttons.github.io/buttons.js"></script>
-<!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/ditw11/CrossCorrelation/subscription" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" data-show-count="true" aria-label="Watch ditw11/CrossCorrelation on GitHub">Watch</a>
-        """)
+<a class="github-button" href="https://github.com/ditw11mhs/CrossCorrelation/" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" data-show-count="true" aria-label="Watch ditw11/CrossCorrelation on GitHub">Watch</a>
+        """,scrolling=False)
         # Time Lag
         st.header("Time Lag")
         self.t_lag = st.slider(label="Time Lag", min_value=-(self.data2_len-1), max_value=self.data2_len -
