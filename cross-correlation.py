@@ -46,7 +46,7 @@ class Main:
             chart_input = pd.DataFrame(
                 {
                     "Data 1": data1,
-                    "Data 2": data2
+                    "Data 2": data2_out
                 }
             )
             st.line_chart(chart_input)
