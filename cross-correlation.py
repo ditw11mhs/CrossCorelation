@@ -44,8 +44,8 @@ class Main:
             st.header("Input Plot")
             chart_input = pd.DataFrame(
                 {
-                    "Data 1": data1,
-                    "Data 2": data2_out
+                    "Heel Data": data1,
+                    "Toe Data": data2_out
                 }
             )
             st.line_chart(chart_input)
@@ -74,8 +74,8 @@ class Main:
         with col4:
             st.header('Data Table')
             st.write(pd.DataFrame({
-                'Data 1': data1,
-                'Data 2': data2_out,
+                'Heel Data': data1,
+                'Toe Data': data2_out,
                 'Correlation': correlation,
                 'Normalized Correlation': norm_correlation
             }
@@ -84,18 +84,18 @@ class Main:
     @st.cache(allow_output_mutation=True)
     def file_loader(self):
 
-        # if self.deploy:
-        #     path1 = r'/app/Data/test.txt'
-        #     path2 = r'/app/Data/test2.txt'
-        # else:
-        #     path1 = r'Data\test.txt'
-        #     path2 = r'Data\test2.txt'
+        if self.deploy:
+            path1 = r'/app/Data/Heel123.txt'
+            path2 = r'/app/Data/Toe123.txt'
+        else:
+            path1 = r'Data\Heel132.txt'
+            path2 = r'Data\Toe123.txt'
 
-        # data1 = np.loadtxt(path1)
-        # data2 = np.loadtxt(path2)
-        x = np.linspace(0, 1, 5000)
-        data1 = np.sin(5*np.pi*x)
-        data2 = np.sin(5*np.pi*x)
+        data1 = np.loadtxt(path1)
+        data2 = np.loadtxt(path2)
+        # x = np.linspace(0, 1, 5000)
+        # data1 = np.sin(5*np.pi*x)
+        # data2 = np.sin(5*np.pi*x)
 
         return data1, data2
 
