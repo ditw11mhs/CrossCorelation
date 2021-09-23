@@ -30,8 +30,7 @@ class Main:
 
         st.title("Cross Correlation")
         st.caption("Aditya Wardianto 07311940000001 - Biomodelling ITS")
-        st.markdown("""<script async defer src="https://buttons.github.io/buttons.js"></script>
-        <a class="github-button" href="https://github.com/ditw11mhs/CrossCorrelation/" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" aria-label="Open ditw11mhs/CrossCorrelation on GitHub">Watch</a>""", unsafe_allow_html=True)
+        st.markdown("""<script async defer src="https://buttons.github.io/buttons.js"></script><a class="github-button" href="https://github.com/ditw11mhs/CrossCorrelation/" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" aria-label="Open ditw11mhs/CrossCorrelation on GitHub">Watch</a>""", unsafe_allow_html=True)
 
         # Time Lag
         st.header("Time Lag")
