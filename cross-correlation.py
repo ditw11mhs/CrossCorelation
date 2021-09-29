@@ -10,7 +10,7 @@ class Main:
         pass
 
     def main(self):
-        self.deploy = True
+        self.deploy = False
 
         # Page Configuration
 
