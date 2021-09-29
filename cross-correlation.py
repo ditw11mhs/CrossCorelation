@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import os
 import sys
+from pathlib import Path
 
 
 class Main:
@@ -10,15 +11,11 @@ class Main:
         pass
 
     def main(self):
-        self.deploy = False
+        self.deploy = True
 
         # Page Configuration
 
-        if self.deploy:
-            favicon_path = r"/app/Data/favicon-web.ico"
-        else:
-            favicon_path = r"Data\favicon-web.ico"
-
+        favicon_path = os.path.join("Resources", "favicon-web.ico")
         st.set_page_config(
             page_title="Tugas Cross Correlation Biomodelling ITS",
             page_icon=favicon_path,
@@ -96,15 +93,11 @@ class Main:
     @st.cache(allow_output_mutation=True)
     def file_loader(self):
 
-        if self.deploy:
-            path1 = r"/app/Data/Heel123.txt"
-            path2 = r"/app/Data/Toe123.txt"
-        else:
-            path1 = r"Data\Heel123.txt"
-            path2 = r"Data\Toe123.txt"
+        data_heel = os.path.join("Data", "Heel123.txt")
+        data_toe = os.path.join("Data", "Toe123.txt")
 
-        data1 = np.loadtxt(path1)
-        data2 = np.loadtxt(path2)
+        data1 = np.loadtxt(data_heel)
+        data2 = np.loadtxt(data_toe)
 
         return data1, data2
 
